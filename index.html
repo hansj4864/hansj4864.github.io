@@ -1,21 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>나의 첫 웹 페이지</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI, 데이터, Python 백엔드 프로젝트를 기록한 개발자 포트폴리오." />
+  <meta name="theme-color" content="#0b1019" />
+  <title>Developer Portfolio — Build, Test, Learn</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header><span class="logo">My Web Page</span></header>
-  <section class="hero">
-    <h1>Welcome to My Page</h1>
-    <p>GitHub Pages로 배포한 첫 번째 웹 페이지입니다.</p>
-  </section>
-  <section class="cards">
-    <div class="card">소개</div>
-    <div class="card">프로젝트</div>
-    <div class="card">연락처</div>
-  </section>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="홈으로"><span class="brand-glyph">&lt;/&gt;</span><span>PORTFOLIO<span class="brand-dot">.</span></span></a>
+      <nav class="site-nav" aria-label="주 메뉴">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#journey">Journey</a>
+      </nav>
+      <a class="header-contact" href="mailto:YOUR_EMAIL@example.com" data-email-link>Contact <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> ENGINEERING PORTFOLIO <span class="eyebrow-line"></span> 2026</div>
+        <h1>문제를 이해하고,<br /><span class="gradient-text">직접 구현해 검증합니다.</span></h1>
+        <p class="hero-intro">컴퓨터 비전에서 시작해 데이터·RAG 시스템과 Python 웹 개발까지. 기술을 사용했다는 사실보다 <strong>어떤 문제에 적용했고, 무엇을 확인했는지</strong> 기록합니다.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#projects">프로젝트 살펴보기 <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="#skills">기술 역량 보기 <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-meta"><span><span class="meta-mark">01</span> AI & MACHINE LEARNING</span><span><span class="meta-mark">02</span> DATA & RAG</span><span><span class="meta-mark">03</span> PYTHON BACKEND</span></div>
+      </div>
+      <div class="hero-visual" aria-label="관심 기술과 작업 원칙을 표현한 코드 카드">
+        <div class="visual-top"><span class="visual-dots"><i></i><i></i><i></i></span><span>profile.py</span><span>● ACTIVE</span></div>
+        <div class="code-lines"><p><em>01</em> <span class="pink">class</span> <span class="aqua">Engineer</span>:</p><p><em>02</em> &nbsp; focus = [</p><p><em>03</em> &nbsp;&nbsp; <span class="yellow">"machine_learning"</span>,</p><p><em>04</em> &nbsp;&nbsp; <span class="yellow">"retrieval_systems"</span>,</p><p><em>05</em> &nbsp;&nbsp; <span class="yellow">"python_backend"</span></p><p><em>06</em> &nbsp; ]</p><p><em>07</em></p><p><em>08</em> &nbsp; <span class="pink">def</span> <span class="aqua">approach</span>(self):</p><p><em>09</em> &nbsp;&nbsp; <span class="pink">return</span> <span class="yellow">"build → test → improve"</span></p></div>
+        <div class="visual-bottom"><span><span class="terminal-prompt">➜</span> Projects backed by implementation</span><span class="cursor-block"></span></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="about">
+      <div class="section-heading"><span class="section-index">01 / ABOUT</span><h2>지금까지의 기술 경험</h2><p>확인 가능한 작업을 중심으로 정리했습니다. 관심 분야나 학습 계획을 숙련도로 포장하지 않습니다.</p></div>
+      <div class="about-grid">
+        <div class="about-lead panel"><span class="panel-kicker">BACKGROUND</span><h3>산업시스템공학에서<br />소프트웨어 구현으로.</h3><p>학부에서 시스템과 최적화를 공부하고, 졸업 작품에서 TensorFlow 기반 의류 분류 모델을 구현했습니다. 이후 AI 엔지니어링 교육과 SSAFY를 거치며 모델 중심의 작업에서 API·데이터 모델·웹 서비스 구현으로 경험을 넓혔습니다.</p><div class="tag-row"><span>산업시스템공학 전공</span><span>AI 엔지니어링 부트캠프 수료</span><span>SSAFY 교육 중</span></div></div>
+        <div class="about-points"><article class="mini-panel"><span class="mini-number">A</span><div><h3>모델을 학습·평가한 경험</h3><p>CNN 분류, 객체 탐지 데이터 보강, VQA 실험 등 이미지 기반 ML 과제를 다뤘습니다.</p></div></article><article class="mini-panel"><span class="mini-number">B</span><div><h3>검색부터 응답까지 연결</h3><p>문서 수집·청킹·임베딩·검색·생성·평가로 이어지는 RAG 파이프라인을 구현했습니다.</p></div></article><article class="mini-panel"><span class="mini-number">C</span><div><h3>서비스 단위로 구현</h3><p>Django/DRF 모델, 시리얼라이저, CRUD API, 관계형 데이터 처리 등을 학습하고 프로젝트에 적용했습니다.</p></div></article></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="skills">
+      <div class="section-heading"><span class="section-index">02 / SKILLS</span><h2>사용해 본 기술과 적용 범위</h2><p>단순 기술 이름 나열 대신, 실제로 무엇을 했는지 함께 명시했습니다.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card panel"><div class="skill-head"><span class="skill-icon">01</span><h3>Language & Data</h3></div><div class="chip-list"><span>Python</span><span>SQL</span><span>NumPy / Pandas</span></div><p>데이터 전처리, 실험 코드 작성, 관계형 데이터 조회와 로직 구현.</p></article>
+        <article class="skill-card panel"><div class="skill-head"><span class="skill-icon">02</span><h3>Machine Learning</h3></div><div class="chip-list"><span>TensorFlow</span><span>CNN</span><span>Object Detection</span><span>VQA</span></div><p>영상 분류 모델 학습, 탐지 데이터셋 보강, 멀티모달 문제 실험.</p></article>
+        <article class="skill-card panel"><div class="skill-head"><span class="skill-icon">03</span><h3>LLM & Retrieval</h3></div><div class="chip-list"><span>LangChain</span><span>LangGraph</span><span>ChromaDB</span><span>Embeddings</span><span>RAGAS</span></div><p>문서 인덱싱, 검색·생성 흐름 구성, 인용 기반 응답과 평가 지표 확인.</p></article>
+        <article class="skill-card panel"><div class="skill-head"><span class="skill-icon">04</span><h3>Backend & Web</h3></div><div class="chip-list"><span>Django</span><span>Django REST Framework</span><span>PostgreSQL</span><span>FastAPI 학습</span></div><p>ORM 관계 모델, serializer, CRUD API 구현. FastAPI는 별도 학습 단계로 표시합니다.</p></article>
+        <article class="skill-card panel"><div class="skill-head"><span class="skill-icon">05</span><h3>Applications</h3></div><div class="chip-list"><span>Streamlit</span><span>HTML / CSS</span><span>JavaScript</span><span>Git</span></div><p>AI 데모 UI와 학습용 웹 화면 제작, 버전 관리 기반 개발.</p></article>
+        <article class="skill-card panel"><div class="skill-head"><span class="skill-icon">06</span><h3>Computer Science</h3></div><div class="chip-list"><span>DFS / BFS</span><span>Shortest Path</span><span>Sorting / Search</span><span>Data Structures</span></div><p>탐색·경로 문제 풀이를 통해 자료구조와 알고리즘 구현 능력을 계속 확장 중입니다.</p></article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="projects">
+      <div class="section-heading"><span class="section-index">03 / PROJECTS</span><h2>프로젝트 & 구현 기록</h2><p>완료 여부와 공개 가능한 범위를 분리했습니다. 링크는 실제 저장소 주소를 확인한 뒤 연결할 수 있습니다.</p></div>
+      <div class="filter-bar" role="group" aria-label="프로젝트 분야 필터"><button class="filter-button is-active" data-filter="all" aria-pressed="true">전체</button><button class="filter-button" data-filter="ai" aria-pressed="false">AI / ML</button><button class="filter-button" data-filter="rag" aria-pressed="false">RAG / Data</button><button class="filter-button" data-filter="web" aria-pressed="false">Backend</button></div>
+      <div class="project-grid">
+        <article class="project-card panel featured" data-category="rag"><div class="project-top"><span class="project-no">PROJECT 01</span><span class="project-state">구현·평가 경험</span></div><div class="project-symbol rag-symbol" aria-hidden="true"><span>R</span><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span></div><div class="project-body"><div class="project-type">RAG / INFORMATION RETRIEVAL</div><h3>Classical Atlas</h3><p>클래식 작곡가 정보를 검색하고 근거 기반 답변을 생성하는 도메인 RAG 애플리케이션.</p><ul><li>작곡가 메타데이터 128건 색인 및 외부 문서 검색 파이프라인 구성</li><li>LangGraph 기반 검색·생성 흐름, 출처 인용, Streamlit 인터페이스 구현</li><li>RAGAS 10문항 평가: Faithfulness <strong>0.9742</strong>, Context Utilization <strong>0.8635</strong></li></ul><div class="project-tags"><span>Python</span><span>LangGraph</span><span>ChromaDB</span><span>RAGAS</span></div></div></article>
+        <article class="project-card panel" data-category="ai"><div class="project-top"><span class="project-no">PROJECT 02</span><span class="project-state">졸업 작품</span></div><div class="project-symbol vision-symbol" aria-hidden="true"><span>◫</span></div><div class="project-body"><div class="project-type">COMPUTER VISION</div><h3>의류 재고 자동관리</h3><p>CNN으로 의류 종류를 분류하고 결과를 재고 관리 흐름에 반영하는 시스템.</p><ul><li>TensorFlow 기반 CNN 구성 및 학습</li><li>이미지 분류 결과와 재고 반영 프로그램 연결</li></ul><div class="project-tags"><span>Python</span><span>TensorFlow</span><span>CNN</span></div></div></article>
+        <article class="project-card panel" data-category="ai"><div class="project-top"><span class="project-no">PROJECT 03</span><span class="project-state">실험 경험</span></div><div class="project-symbol detection-symbol" aria-hidden="true"><span>⊞</span></div><div class="project-body"><div class="project-type">OBJECT DETECTION / DATASET</div><h3>알약 객체 탐지 데이터 개선</h3><p>누락 라벨과 데이터 불균형 문제를 다루며 학습 데이터 품질을 개선한 객체 탐지 과제.</p><ul><li>약 4,000장 이미지 데이터 점검 및 누락 라벨 대응</li><li>크롭·합성 및 클래스별 증강 실험</li><li>탐지 성능 개선 방향을 mAP 지표로 검토</li></ul><div class="project-tags"><span>Computer Vision</span><span>Augmentation</span><span>Evaluation</span></div></div></article>
+        <article class="project-card panel" data-category="ai"><div class="project-top"><span class="project-no">PROJECT 04</span><span class="project-state">실험 경험</span></div><div class="project-symbol vqa-symbol" aria-hidden="true"><span>?</span></div><div class="project-body"><div class="project-type">MULTIMODAL / VQA</div><h3>이미지 기반 객관식 질의응답</h3><p>간판·메뉴판 등의 이미지와 질문을 함께 해석하는 다중모달 객관식 과제.</p><ul><li>이미지·텍스트 입력, 선택지 분류 구조 검토</li><li>제한된 연산 자원에서 학습·추론 효율화 시도</li><li>부정형 질문과 시각 정보 추출의 한계 분석</li></ul><div class="project-tags"><span>VQA</span><span>Feature Engineering</span><span>Experimentation</span></div></div></article>
+        <article class="project-card panel" data-category="web"><div class="project-top"><span class="project-no">PROJECT 05</span><span class="project-state ongoing">학습·개발 중</span></div><div class="project-symbol backend-symbol" aria-hidden="true"><span>{ }</span></div><div class="project-body"><div class="project-type">BACKEND / DATABASE</div><h3>Django 도서·스레드 API</h3><p>도서와 독서 스레드, 댓글 및 좋아요 관계를 모델링한 학습 프로젝트.</p><ul><li>ForeignKey / ManyToMany 모델 관계 설계</li><li>DRF serializer, CRUD 엔드포인트 구현 및 수정</li><li>중첩 데이터 표현과 요청 유효성 검증 학습</li></ul><div class="project-tags"><span>Django</span><span>DRF</span><span>ORM</span><span>REST API</span></div></div></article>
+        <article class="project-card panel" data-category="web"><div class="project-top"><span class="project-no">PROJECT 06</span><span class="project-state ongoing">진행 중</span></div><div class="project-symbol fintech-symbol" aria-hidden="true"><span>↗</span></div><div class="project-body"><div class="project-type">BACKEND / TEAM PROJECT</div><h3>모임통장 서비스</h3><p>공동 자금 관리 흐름을 구현하기 위한 팀 프로젝트.</p><ul><li>Django REST Framework와 PostgreSQL 기반 개발환경 구성</li><li>API 및 데이터 모델을 중심으로 백엔드 개발 진행</li><li>진행 중인 작업과 완료된 기능을 구분하여 기록</li></ul><div class="project-tags"><span>Python</span><span>Django REST Framework</span><span>PostgreSQL</span></div></div></article>
+      </div>
+      <p class="project-disclaimer">* 수치와 구현 내용은 작업 기록에 근거합니다. 일부 과제의 최종 성능·배포 상태는 확인되지 않아 기재하지 않았습니다.</p>
+    </section>
+
+    <section class="section wrap" id="journey"><div class="section-heading"><span class="section-index">04 / JOURNEY</span><h2>학습과 구현의 흐름</h2><p>기술을 습득한 경로와 실제 수행한 작업을 함께 정리했습니다.</p></div><div class="timeline"><article><span class="timeline-marker"></span><div class="timeline-side">UNIVERSITY</div><div class="timeline-content"><h3>산업시스템공학 전공</h3><p>시스템·최적화 학습. CNN 기반 의류 재고관리 시스템을 졸업 작품으로 구현.</p></div></article><article><span class="timeline-marker"></span><div class="timeline-side">TRAINING</div><div class="timeline-content"><h3>AI 엔지니어링 부트캠프</h3><p>Codeit 주관 7개월 과정 수료. 데이터 처리와 AI 프로젝트 경험 확장.</p></div></article><article><span class="timeline-marker"></span><div class="timeline-side">PROJECT WORK</div><div class="timeline-content"><h3>비전·RAG 실험과 구현</h3><p>객체 탐지·VQA 실험, 클래식 음악 도메인 RAG 구현 및 검색·응답 품질 평가.</p></div></article><article><span class="timeline-marker"></span><div class="timeline-side">CURRENT</div><div class="timeline-content"><h3>SSAFY · 소프트웨어 기초 및 웹 개발</h3><p>자료구조·알고리즘, Django/DRF, 데이터 모델 및 API 구현 역량을 학습·적용 중.</p></div></article></div></section>
+
+    <section class="contact-section wrap" id="contact"><div class="contact-box"><span class="section-index">05 / CONTACT</span><h2>코드와 프로젝트 기록으로<br /><span class="gradient-text">대화하고 싶습니다.</span></h2><p>아래 연락처와 GitHub 주소를 실제 정보로 교체하면 바로 사용할 수 있습니다.</p><div class="contact-actions"><a class="btn btn-primary" data-github-link href="#" aria-disabled="true">GitHub 프로필 <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" data-email-link href="mailto:YOUR_EMAIL@example.com">이메일 보내기 <span aria-hidden="true">↗</span></a></div></div></section>
+  </main>
+  <footer class="footer wrap"><span>© <span id="year">2026</span> Developer Portfolio</span><span>Built with HTML, CSS & JavaScript · GitHub Pages ready</span><a href="#top">Back to top ↑</a></footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
